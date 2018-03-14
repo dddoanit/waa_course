@@ -3,6 +3,7 @@ package cs545.bank.beans;
 import java.io.Serializable;
 import java.util.Map;
 
+import javax.enterprise.context.ConversationScoped;
 import javax.enterprise.context.RequestScoped;
 import javax.faces.context.FacesContext;
 import javax.inject.Inject;
@@ -11,7 +12,7 @@ import javax.inject.Named;
 import cs545.bank.domain.Account;
 
 @Named
-@RequestScoped
+@ConversationScoped
 public class DetailAccountController implements Serializable{
 
 	private static final long serialVersionUID = 1L;
@@ -31,8 +32,10 @@ public class DetailAccountController implements Serializable{
 		FacesContext context = FacesContext.getCurrentInstance();
 		Map<String, String> paramMap = context.getExternalContext().getRequestParameterMap();
 		System.out.println("accountNumber: " + paramMap.get("accountnumber"));
-		accountNumber = Long.parseLong(paramMap.get("accountnumber"));
-		if (account != null) {
+		if (paramMap.get("accountnumber") != null) {
+			accountNumber = Long.parseLong(paramMap.get("accountnumber"));
+		}
+		if (account == null) {
 			account = cacheManagerBean.getAccount(accountNumber);
 		}
 		return account;
@@ -46,9 +49,9 @@ public class DetailAccountController implements Serializable{
 		this.accountNumber = accountNumber;
 	}
 
-	public Object depositListener() {
+	public void depositListener() {
 		cacheManagerBean.getService().deposit(accountNumber, amount);
-		return null;
+		this.getAccount();
 	}
 
 	public double getAmount() {

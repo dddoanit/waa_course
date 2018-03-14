@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.enterprise.context.ConversationScoped;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 import javax.inject.Named;
@@ -11,7 +12,7 @@ import javax.inject.Named;
 import cs545.bank.domain.Account;
 
 @Named
-@RequestScoped
+@ConversationScoped
 public class ListAccountController implements Serializable{
 
 	private static final long serialVersionUID = 1L;
@@ -19,7 +20,12 @@ public class ListAccountController implements Serializable{
 	@Inject
 	private CacheManagerBean cacheManagerBean;
 	
+//	@Inject
+//	DetailAccountController detailAccountController;
+	
+	
 	public List<Account> getAllAccounts() {
+//		detailAccountController.setAccountNumber(10);
 		return new ArrayList<>(cacheManagerBean.getAllAccounts());
 	}
 
