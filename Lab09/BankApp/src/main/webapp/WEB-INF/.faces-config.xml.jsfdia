@@ -4,26 +4,28 @@
   SHAPE="256,465,0,0" model-entity="JSFProcessGroup">
   <PROCESS-ITEM ID="rules:#index.xhtml:0" NAME="item"
    PATH="/index.xhtml" model-entity="JSFProcessItem">
-   <PROCESS-ITEM-OUTPUT ID="create::#account" NAME="output"
-    PATH="/account" TARGET="rules:#account" TITLE="create" model-entity="JSFProcessItemOutput"/>
-   <PROCESS-ITEM-OUTPUT ID="list::#account#list.xhtml" NAME="output1"
-    PATH="/account/list.xhtml" TARGET="rules:#account#list.xhtml"
-    TITLE="list" model-entity="JSFProcessItemOutput"/>
-   <PROCESS-ITEM-OUTPUT ID="detail::#account#detail.xhtml"
-    NAME="output2" PATH="/account/detail.xhtml"
-    TARGET="rules:#account#detail.xhtml" TITLE="detail" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="create::#account-deposit" NAME="output"
+    PATH="/account-deposit" TARGET="rules:#account-deposit"
+    TITLE="create" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="list::#account-deposit#list.xhtml"
+    NAME="output1" PATH="/account-deposit/list.xhtml"
+    TARGET="rules:#account-deposit#list.xhtml" TITLE="list" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="detail::#account-deposit#detail.xhtml"
+    NAME="output2" PATH="/account-deposit/detail.xhtml"
+    TARGET="rules:#account-deposit#detail.xhtml" TITLE="detail" model-entity="JSFProcessItemOutput"/>
   </PROCESS-ITEM>
  </PROCESS-ITEM>
- <PROCESS-ITEM NAME="rules:#account#list.xhtml"
-  PATH="/account/list.xhtml" SHAPE="480,641,0,0" model-entity="JSFProcessGroup">
-  <PROCESS-ITEM ID="rules:#account#list.xhtml:0" NAME="item"
-   PATH="/account/list.xhtml" model-entity="JSFProcessItem">
-   <PROCESS-ITEM-OUTPUT ID="detail::#account#detail.xhtml" NAME="output"
-    PATH="/account/detail.xhtml" TARGET="rules:#account#detail.xhtml"
-    TITLE="detail" model-entity="JSFProcessItemOutput"/>
+ <PROCESS-ITEM NAME="rules:#account-deposit#list.xhtml"
+  PATH="/account-deposit/list.xhtml" SHAPE="480,641,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#account-deposit#list.xhtml:0" NAME="item"
+   PATH="/account-deposit/list.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="detail::#account-deposit#detail.xhtml"
+    NAME="output" PATH="/account-deposit/detail.xhtml"
+    TARGET="rules:#account-deposit#detail.xhtml" TITLE="detail" model-entity="JSFProcessItemOutput"/>
   </PROCESS-ITEM>
  </PROCESS-ITEM>
- <PROCESS-ITEM NAME="rules:#account" PATH="/account" SHAPE="480,465,0,0" model-entity="JSFProcessGroup"/>
- <PROCESS-ITEM NAME="rules:#account#detail.xhtml"
-  PATH="/account/detail.xhtml" SHAPE="704,657,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#account-deposit#detail.xhtml"
+  PATH="/account-deposit/detail.xhtml" SHAPE="704,657,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#account-deposit" PATH="/account-deposit"
+  SHAPE="480,465,0,0" model-entity="JSFProcessGroup"/>
 </PROCESS>

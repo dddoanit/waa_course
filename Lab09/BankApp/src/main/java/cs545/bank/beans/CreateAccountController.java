@@ -11,7 +11,7 @@ import javax.inject.Inject;
 import javax.inject.Named;
 
 @Named
-@FlowScoped("account")
+@FlowScoped("account-deposit")
 public class CreateAccountController implements Serializable{
 	
 	private static final long serialVersionUID = 1L;

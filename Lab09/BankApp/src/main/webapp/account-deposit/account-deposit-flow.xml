@@ -4,12 +4,12 @@
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
               http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
 
-	<flow-definition id="account">
+	<flow-definition id="account-deposit">
 
 		<start-node>create</start-node>
 
 		<view id="create">
-			<vdl-document>/account/create.xhtml</vdl-document>
+			<vdl-document>/account-deposit/create.xhtml</vdl-document>
 		</view>
 
 		<flow-return id="exit">
@@ -17,14 +17,14 @@
 		</flow-return>
 
 		<navigation-rule>
-			<from-view-id>/account/create.xhtml</from-view-id>
+			<from-view-id>/account-deposit/create.xhtml</from-view-id>
 			<navigation-case>
 				<from-outcome>next</from-outcome>
-				<to-view-id>/account/deposit.xhtml</to-view-id>
+				<to-view-id>/account-deposit/deposit.xhtml</to-view-id>
 			</navigation-case>
 		</navigation-rule>
 		<navigation-rule>
-			<from-view-id>/account/create.xhtml</from-view-id>
+			<from-view-id>/account-deposit/create.xhtml</from-view-id>
 			<navigation-case>
 				<from-outcome>cancel</from-outcome>
 				<to-view-id>exitAccount</to-view-id>
@@ -32,7 +32,7 @@
 		</navigation-rule>
 
 		<navigation-rule>
-			<from-view-id>/account/deposit.xhtml</from-view-id>
+			<from-view-id>/account-deposit/deposit.xhtml</from-view-id>
 			<navigation-case>
 				<from-outcome>success</from-outcome>
 				<to-view-id>exitAccount</to-view-id>
@@ -40,15 +40,15 @@
 		</navigation-rule>
 		
 		<navigation-rule>
-			<from-view-id>/account/deposit.xhtml</from-view-id>
+			<from-view-id>/account-deposit/deposit.xhtml</from-view-id>
 			<navigation-case>
 				<from-outcome>previous</from-outcome>
-				<to-view-id>/account/create.xhtml</to-view-id>
+				<to-view-id>/account-deposit/create.xhtml</to-view-id>
 			</navigation-case>
 		</navigation-rule>
 		
 		<navigation-rule>
-			<from-view-id>/account/deposit.xhtml</from-view-id>
+			<from-view-id>/account-deposit/deposit.xhtml</from-view-id>
 			<navigation-case>
 				<from-outcome>cancel</from-outcome>
 				<to-view-id>exit</to-view-id>
