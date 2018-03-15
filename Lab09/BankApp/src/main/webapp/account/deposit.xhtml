@@ -13,7 +13,7 @@
 	<h:form>
 		<h:panelGrid columns="2">
 			<h:outputLabel>Deposit</h:outputLabel>
-			<h:inputText value="#{createAccountController.deposit}" />
+			<h:inputText value="#{createAccountController.deposit}" disabled="#{createAccountController.deposit}" validator="#{createAccountController.validateDeposit}"/>
 		</h:panelGrid>
 		<h:commandButton value="Subumit" action="#{createAccountController.createAccount()}" />
 		<h:commandButton value="Previous" action="previous" immediate="true" />
