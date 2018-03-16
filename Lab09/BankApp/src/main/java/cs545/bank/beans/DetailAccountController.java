@@ -50,7 +50,7 @@ public class DetailAccountController implements Serializable{
 
 	public void depositListener() {
 		cacheManagerBean.getService().deposit(accountNumber, amount);
-		this.getAccount();
+//		this.getAccount();
 	}
 
 	public double getAmount() {
