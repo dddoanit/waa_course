@@ -9,7 +9,8 @@
 	<title>Account Detail</title>
 </h:head>
 <f:metadata>
-	<f:viewParam name="accountnumber" value="${detailAccountController.accountNumber}"></f:viewParam>
+	<f:viewParam name="accountnumber" value="#{detailAccountController.accountNumber}"></f:viewParam>
+	<f:viewAction action="#{detailAccountController.loadAccount}"></f:viewAction>
 </f:metadata>
 <h:body>
 	<h1>Account Detail</h1>

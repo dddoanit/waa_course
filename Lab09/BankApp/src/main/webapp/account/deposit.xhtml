@@ -13,8 +13,9 @@
 	<h:form>
 		<h:panelGrid columns="2">
 			<h:outputLabel>Deposit</h:outputLabel>
-			<h:inputText value="#{createAccountController.deposit}" validator="#{createAccountController.validateDeposit}" required="true"/>
+			<h:inputText id="deposit" value="#{createAccountController.deposit}" validator="#{createAccountController.validateDeposit}" required="true"/>
 		</h:panelGrid>
+		<h:message for="deposit"/>
 		<h:commandButton value="Submit" action="#{createAccountController.createAccount()}" />
 		<h:commandButton value="Previous" action="previous" immediate="true" />
 	</h:form>
