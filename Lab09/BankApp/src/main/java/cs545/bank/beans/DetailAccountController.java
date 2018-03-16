@@ -3,7 +3,6 @@ package cs545.bank.beans;
 import java.io.Serializable;
 import java.util.Map;
 
-import javax.enterprise.context.ConversationScoped;
 import javax.enterprise.context.RequestScoped;
 import javax.faces.context.FacesContext;
 import javax.inject.Inject;
@@ -12,7 +11,7 @@ import javax.inject.Named;
 import cs545.bank.domain.Account;
 
 @Named
-@ConversationScoped
+@RequestScoped
 public class DetailAccountController implements Serializable{
 
 	private static final long serialVersionUID = 1L;

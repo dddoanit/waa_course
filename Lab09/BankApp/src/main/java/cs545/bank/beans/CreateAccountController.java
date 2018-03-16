@@ -11,7 +11,7 @@ import javax.inject.Inject;
 import javax.inject.Named;
 
 @Named
-@FlowScoped("account-deposit")
+@FlowScoped("account")
 public class CreateAccountController implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
@@ -52,7 +52,7 @@ public class CreateAccountController implements Serializable{
 	
 	public void validateDeposit(FacesContext context, UIComponent comp,
 			Object value) {
-		double depositVal = Double.valueOf((String)value);
+		double depositVal = (double)value;
 		if (depositVal < 0) {
 			((UIInput) comp).setValid(false);
 
