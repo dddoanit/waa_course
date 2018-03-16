@@ -27,7 +27,7 @@
 			<from-view-id>/account/account.xhtml</from-view-id>
 			<navigation-case>
 				<from-outcome>cancel</from-outcome>
-				<to-view-id>exitAccount</to-view-id>
+				<to-view-id>exit</to-view-id>
 			</navigation-case>
 		</navigation-rule>
 
