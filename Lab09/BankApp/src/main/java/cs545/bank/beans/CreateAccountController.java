@@ -1,5 +1,6 @@
 package cs545.bank.beans;
 
+import java.io.IOException;
 import java.io.Serializable;
 
 import javax.faces.application.FacesMessage;
@@ -47,6 +48,12 @@ public class CreateAccountController implements Serializable{
 	public String createAccount() {
 		cacheManagerBean.create(name, accountNumber);
 		cacheManagerBean.getService().deposit(accountNumber, deposit);
+		try {
+			FacesContext.getCurrentInstance().getExternalContext().redirect("/list.xhtml");
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		return "success";
 	}
 	

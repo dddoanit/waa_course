@@ -13,11 +13,19 @@
 	<h:form>
 		<h:panelGrid columns="2">
 			<h:outputLabel>Name</h:outputLabel>
-			<h:inputText value="#{createAccountController.name}" />
+			<h:inputText id="accountName" value="#{createAccountController.name}">
+				<f:validator validatorId="accountNameValidator"></f:validator>
+				<f:converter converterId="accountNameConverter"></f:converter>
+			</h:inputText>
 			<h:outputLabel>Account number</h:outputLabel>
-			<h:inputText value="#{createAccountController.accountNumber}" />
+			<h:inputText id="accountNumber" value="#{createAccountController.accountNumber}">
+				<f:validator validatorId="accountNumberValidator"></f:validator>
+			</h:inputText>
 		</h:panelGrid>
-		<h:commandButton value="Create" action="next" />
+		<h:message for="accountName"/>
+		<br></br>
+		<h:message for="accountNumber"/>
+		<h:commandButton value="Create" action="next"/>
 		<h:commandButton value="Cancel" action="cancel" immediate="true" />
 	</h:form>
 </h:body>
